@@ -35,7 +35,7 @@
     exploreJourney: 'Explore the journey',
     sectionLeadership: 'Leadership positions',
     leadershipKicker: 'Responsibility makes the difference',
-    leadershipTitle: 'Roles that open<br /><em>new horizons.</em>',
+    leadershipTitle: 'Roles that open <em>new horizons.</em>',
     leadershipIntro: 'Leadership positions connecting asset and investment management, institutional development, and opportunities for the future.',
     fundType: 'Sovereign sector',
     fundTitle: 'Syrian Sovereign Fund',
