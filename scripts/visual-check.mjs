@@ -40,6 +40,8 @@ try {
           const title = document.querySelector('.hero-title');
           const photo = document.querySelector('.about-scene img');
           const glass = document.querySelector('.leadership-card');
+          const glassIcon = document.querySelector('#language-toggle');
+          const menuStroke = document.querySelector('.menu-button span');
           return {
             lang: document.documentElement.lang,
             theme: document.documentElement.dataset.theme,
@@ -48,6 +50,8 @@ try {
             titleClipped: title.scrollWidth > title.clientWidth + 1,
             photoLoaded: photo.complete && photo.naturalWidth > 0,
             glassBlur: getComputedStyle(glass).backdropFilter,
+            iconBlur: getComputedStyle(glassIcon).backdropFilter,
+            menuStrokePosition: getComputedStyle(menuStroke).position,
           };
         });
         const tag = `${viewportName}-${language}-${theme}`;
@@ -81,4 +85,4 @@ try {
 }
 
 console.log(JSON.stringify({ output, results }, null, 2));
-if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
+if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || !result.photoLoaded || result.glassBlur === 'none' || result.iconBlur === 'none' || result.menuStrokePosition !== 'absolute')) process.exitCode = 1;
