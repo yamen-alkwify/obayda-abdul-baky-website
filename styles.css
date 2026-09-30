@@ -354,7 +354,7 @@ html[lang="en"] .contact-title em{font-style:italic}
 body{background:var(--bg)}
 body::before,body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none}
 body::before{background:radial-gradient(ellipse 75% 36% at 48% -9%,#293434 0%,transparent 80%),radial-gradient(ellipse 65% 43% at 100% 77%,rgba(139,111,68,.105),transparent 80%),linear-gradient(155deg,#0d1214 0%,#141b1b 48%,#101516 100%)}
-body::after{background:radial-gradient(ellipse 75% 38% at 48% -9%,#fffef7 0%,transparent 80%),radial-gradient(ellipse 65% 43% at 100% 77%,rgba(191,171,134,.14),transparent 80%),linear-gradient(155deg,#f1f1ec 0%,#e9eeea 48%,#eeeae2 100%);opacity:0;transition:opacity .55s ease}
+body::after{background:radial-gradient(ellipse 65% 43% at 100% 77%,rgba(191,171,134,.14),transparent 80%),linear-gradient(155deg,#f1f1ec 0%,#e9eeea 48%,#eeeae2 100%);opacity:0;transition:opacity .55s ease}
 :root[data-theme="light"] body::after{opacity:1}
 .page-shell{position:relative;z-index:1;background:transparent}
 .skip-link{width:1px;height:1px;padding:0;overflow:hidden;white-space:nowrap;clip-path:inset(50%);transform:none}
