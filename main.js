@@ -46,7 +46,7 @@
     shamRole: 'Chairman',
     shamNote: 'Guiding the company’s direction in an economy looking toward growth.',
     statementAria: 'Approach',
-    statement: 'True leadership begins when a vision becomes an impact people can feel.',
+    statement: 'True leadership begins when a vision becomes an <span class="statement-highlight">impact people can feel.</span>',
     statementLabel: 'Working approach',
     sectionJourney: 'Professional journey',
     journeyKicker: 'Experience across disciplines',
