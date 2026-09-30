@@ -5,8 +5,7 @@
   // document also means the page is readable before JavaScript runs.
   const english = {
     skip: 'Skip to content',
-    brandName: 'Obayda<br />Abdul Baky',
-    brandAria: 'Obayda Abdul Baky — home',
+    contactAria: 'Contact',
     navAria: 'Main navigation',
     mobileNavAria: 'Mobile navigation',
     navAbout: 'About',
@@ -28,7 +27,7 @@
     aboutKicker: 'Vision shaped by action',
     aboutTitle: 'Leading with a vision<br /><em>for wider impact.</em>',
     aboutSmall: 'Where investment and development meet, ideas become action.',
-    aboutAlt: 'Portrait of Obayda Abdul Baky',
+    aboutAlt: 'Obayda Abdul Baky signing a document in a meeting room',
     aboutOverline: 'Profile / 2026',
     aboutParaOne: 'Obayda Abdul Baky’s career brings together institutional leadership, investment management, and work in real estate development and housing projects. His responsibilities have crossed the public and private sectors, with an interest in building tangible development opportunities.',
     aboutParaTwo: 'He currently serves on the board of the Syrian Sovereign Fund and chairs Sham Holding Company, continuing to connect strategic vision with institutional execution.',
@@ -89,7 +88,7 @@
   const backgroundRegions = [document.getElementById('main'), document.querySelector('.site-footer')].filter(Boolean);
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(pointer: fine)');
-  const htmlKeys = new Set(['brandName', 'heroName']);
+  const htmlKeys = new Set(['heroName']);
   const nodes = {
     text: [...document.querySelectorAll('[data-i18n]')],
     html: [...document.querySelectorAll('[data-i18n-html]')],
@@ -145,9 +144,6 @@
 
   function updateControls() {
     const labels = pageMeta[language];
-    const languageName = langButton.querySelector('span');
-    languageName.textContent = language === 'ar' ? 'EN' : 'عربي';
-    languageName.lang = language === 'ar' ? 'en' : 'ar';
     langButton.setAttribute('aria-label', labels.languageToggle);
     langButton.setAttribute('title', labels.languageToggle);
     themeButton.setAttribute('aria-label', theme === 'dark' ? labels.themeToggleLight : labels.themeToggleDark);
@@ -192,7 +188,7 @@
   function applyTheme(next, persist = true) {
     theme = next;
     root.dataset.theme = next;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next === 'dark' ? '#101112' : '#f5f2ec');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next === 'dark' ? '#0d1214' : '#efeee9');
     updateControls();
     if (persist) savePreference('obayda-theme', next);
   }
@@ -320,6 +316,23 @@
       });
       reduceMotion.addEventListener?.('change', () => {
         if (reduceMotion.matches) link.style.translate = '';
+      });
+    }
+
+    for (const card of document.querySelectorAll('.leadership-card')) {
+      let frame = 0;
+      card.addEventListener('pointermove', (event) => {
+        if (frame) cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mx', `${((event.clientX - rect.left) / rect.width * 100).toFixed(1)}%`);
+          card.style.setProperty('--my', `${((event.clientY - rect.top) / rect.height * 100).toFixed(1)}%`);
+        });
+      });
+      card.addEventListener('pointerleave', () => {
+        if (frame) cancelAnimationFrame(frame);
+        card.style.removeProperty('--mx');
+        card.style.removeProperty('--my');
       });
     }
   }
