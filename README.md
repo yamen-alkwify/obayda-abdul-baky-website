@@ -2,6 +2,11 @@
 
 A bilingual Arabic/English personal website with dark and light themes. It uses plain HTML, CSS, and JavaScript, with no runtime dependencies or build step.
 
+## Preview
+
+<img src="docs/preview-desktop.png" alt="Arabic dark theme on desktop" width="780" />
+<img src="docs/preview-mobile.png" alt="English dark theme on mobile" width="250" />
+
 ## Local preview
 
 Requires Node.js 18 or newer.
