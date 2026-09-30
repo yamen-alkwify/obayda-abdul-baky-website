@@ -577,3 +577,69 @@ html[lang="en"] .card-content h3{font-size:clamp(42px,4.3vw,67px)}
 .utility-button:hover,.header-contact:hover,.menu-button:hover{transform:none;background:transparent!important;border-color:transparent!important;box-shadow:none!important;color:var(--gold)}
 .site-header{background:transparent!important;border-color:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .site-header.scrolled,.site-header.menu-open{background:var(--header-glass)!important;border-color:transparent!important;box-shadow:0 12px 36px var(--glass-shadow)!important;backdrop-filter:blur(24px) saturate(160%)!important;-webkit-backdrop-filter:blur(24px) saturate(160%)!important}
+
+/* Extended profile: project work, experience areas and professional training */
+.journey-section{background:var(--bg)}
+.journey-body{min-width:0}
+.journey-list{gap:11px}
+.journey-item{min-height:98px}
+.experience-record{margin-block-start:62px}
+.experience-record-heading{margin-block-end:21px}
+.experience-record-heading h3,.training-heading h3{margin:10px 0 8px;color:var(--ink-strong);font-size:clamp(28px,3vw,43px);font-weight:300;letter-spacing:-.035em;line-height:1.35}
+.experience-record-heading p,.training-heading p{margin:0;max-width:500px;color:var(--muted);font-size:12px;line-height:1.9}
+.scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.scope-card:last-child:nth-child(odd){grid-column:1/-1}
+.scope-card,.project-card,.training-card{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--glass-line);border-radius:21px;background:linear-gradient(135deg,var(--glass-strong),var(--glass-base) 70%,rgba(255,255,255,.012));box-shadow:inset 0 1px 0 var(--glass-bright),0 12px 36px var(--glass-shadow);backdrop-filter:blur(20px) saturate(155%);-webkit-backdrop-filter:blur(20px) saturate(155%);transition:transform .35s,border-color .35s,box-shadow .35s}
+.scope-card{min-height:151px;padding:20px 22px}
+.scope-card:hover,.project-card:hover,.training-card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--gold) 55%,var(--glass-line));box-shadow:inset 0 1px 0 var(--glass-bright),0 18px 43px var(--glass-shadow)}
+.scope-period,.project-category{display:block;margin-block-end:9px;color:var(--gold);font-size:10px;letter-spacing:.07em}
+.scope-card h4,.training-card h4{margin:0 0 8px;color:var(--ink-strong);font-size:17px;font-weight:400;line-height:1.5}
+.scope-card p,.project-card p,.training-card p{margin:0;color:var(--muted);font-size:11px;font-weight:300;line-height:1.9}
+.project-section{padding-block-start:125px;background:transparent}
+.project-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.45fr);align-items:end;gap:45px;margin-block-end:43px}
+.project-heading .section-title{margin-block-start:13px}
+.project-heading>p{max-width:420px;margin:0 0 13px;color:var(--muted);font-size:13px;line-height:2}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.project-card{min-height:230px;padding:27px 26px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+.project-card::before{content:"";position:absolute;inset-inline-end:-82px;inset-block-start:-105px;width:210px;height:210px;border:1px solid var(--glass-line);border-radius:50%;z-index:-1;opacity:.55}
+.project-card::after{content:"";position:absolute;inset-inline-end:-44px;inset-block-start:-68px;width:132px;height:132px;border:1px solid var(--glass-line);border-radius:50%;z-index:-1;opacity:.42}
+.project-card h3{max-width:340px;margin:0 0 10px;color:var(--ink-strong);font-size:clamp(21px,2.1vw,29px);font-weight:300;line-height:1.45;letter-spacing:-.025em}
+.training-block{margin-block-start:105px}
+.training-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.7fr);align-items:end;column-gap:38px;margin-block-end:27px}
+.training-heading .kicker{grid-column:1/-1}
+.training-heading h3{margin-block-start:8px}
+.training-heading p{margin-block-end:9px}
+.training-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.training-card{min-height:160px;padding:24px 24px}
+.personal-profile{margin-block-start:63px;padding-block-start:34px;border-top:1px solid var(--line)}
+.personal-profile-heading{margin-block-end:20px}
+.personal-profile-heading h4{margin:8px 0 0;color:var(--ink-strong);font-size:clamp(24px,2.7vw,38px);font-weight:300;line-height:1.4}
+.skill-tags{display:flex;flex-wrap:wrap;gap:10px}
+.skill-tag{display:inline-flex;align-items:center;min-height:39px;padding:9px 14px;border:1px solid var(--glass-line);border-radius:999px;background:linear-gradient(135deg,var(--glass-strong),var(--glass-base));box-shadow:inset 0 1px 0 var(--glass-bright),0 8px 24px var(--glass-shadow);backdrop-filter:blur(15px) saturate(150%);-webkit-backdrop-filter:blur(15px) saturate(150%);color:var(--ink);font-size:11px;line-height:1.6}
+.language-panel{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-block-start:22px;padding:19px 22px;border:1px solid var(--glass-line);border-radius:18px;background:linear-gradient(120deg,var(--glass-strong),var(--glass-base));box-shadow:inset 0 1px 0 var(--glass-bright),0 10px 28px var(--glass-shadow);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
+.language-label{color:var(--gold);font-size:10px;letter-spacing:.08em}
+.language-list{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 22px;color:var(--ink);font-size:11px}
+@media(max-width:1050px){
+  .project-grid,.training-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-heading{grid-template-columns:minmax(0,1fr) minmax(220px,.55fr)}
+}
+@media(max-width:700px){
+  .experience-record{margin-block-start:43px}
+  .scope-grid,.project-grid,.training-grid{grid-template-columns:1fr}
+  .scope-card{min-height:0;padding:19px 20px}
+  .project-section{padding-block-start:80px}
+  .project-heading,.training-heading{display:block;margin-block-end:25px}
+  .project-heading>p{margin-block-start:23px}
+  .project-card{min-height:190px;padding:24px}
+  .training-block{margin-block-start:75px}
+  .training-heading p{margin-block-start:12px}
+  .training-card{min-height:0;padding:21px}
+  .personal-profile{margin-block-start:48px;padding-block-start:26px}
+  .skill-tags{gap:8px}
+  .skill-tag{min-height:36px;padding:8px 12px;font-size:10px}
+  .language-panel{display:block;padding:18px}
+  .language-list{justify-content:flex-start;margin-block-start:12px;gap:8px 15px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .scope-card,.project-card,.training-card,.skill-tag,.language-panel{background:var(--bg)}
+}
