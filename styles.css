@@ -348,8 +348,8 @@ html[lang="en"] .contact-title em{font-style:italic}
 
 /* Continuous atmosphere and glass surfaces */
 @font-face{font-family:Amiri;src:url("assets/fonts/amiri-arabic-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
-:root[data-theme="dark"]{--bg:#0d1214;--bg-elevated:transparent;--bg-soft:transparent;--card:transparent;--card-hover:transparent;--ink:#f5f2e9;--ink-strong:#fffaf1;--muted:#b7bfba;--muted-soft:#91a09a;--gold:#d9bc87;--gold-soft:#f2d8a1;--line:rgba(224,238,232,.16);--line-strong:rgba(224,238,232,.26);--header-glass:rgba(16,23,24,.55);--glass-base:rgba(222,241,232,.055);--glass-strong:rgba(222,241,232,.105);--glass-line:rgba(239,253,246,.2);--glass-bright:rgba(255,255,255,.32);--glass-shadow:rgba(0,0,0,.32);--liquid-top:rgba(237,251,249,.3);--liquid-base:rgba(192,217,219,.11);--liquid-bottom:rgba(124,152,158,.1);--liquid-rim:rgba(245,255,252,.62);--liquid-glint:rgba(255,255,255,.82);--liquid-edge:rgba(255,255,255,.28);--liquid-inset:rgba(2,10,12,.55);--liquid-outline:rgba(230,247,246,.14);--liquid-shadow:rgba(0,0,0,.58);--liquid-panel-glow:rgba(229,249,246,.13)}
-:root[data-theme="light"]{--bg:#efeee9;--bg-elevated:transparent;--bg-soft:transparent;--card:transparent;--card-hover:transparent;--ink:#1b2423;--ink-strong:#0e1716;--muted:#586663;--muted-soft:#70817b;--gold:#876a46;--gold-soft:#ad8b5e;--line:rgba(28,52,47,.14);--line-strong:rgba(28,52,47,.23);--header-glass:rgba(238,242,237,.58);--glass-base:rgba(255,255,255,.42);--glass-strong:rgba(255,255,255,.67);--glass-line:rgba(255,255,255,.78);--glass-bright:rgba(255,255,255,.93);--glass-shadow:rgba(56,70,63,.13);--liquid-top:rgba(255,255,255,.84);--liquid-base:rgba(226,235,238,.53);--liquid-bottom:rgba(179,194,199,.29);--liquid-rim:rgba(255,255,255,.98);--liquid-glint:#fff;--liquid-edge:rgba(255,255,255,.9);--liquid-inset:rgba(91,112,117,.3);--liquid-outline:rgba(77,97,103,.27);--liquid-shadow:rgba(56,73,77,.32);--liquid-panel-glow:rgba(255,255,255,.55)}
+:root[data-theme="dark"]{--bg:#0d1214;--bg-elevated:transparent;--bg-soft:transparent;--card:transparent;--card-hover:transparent;--ink:#f5f2e9;--ink-strong:#fffaf1;--muted:#b7bfba;--muted-soft:#91a09a;--gold:#d9bc87;--gold-soft:#f2d8a1;--line:rgba(224,238,232,.16);--line-strong:rgba(224,238,232,.26);--header-glass:rgba(16,23,24,.55);--glass-base:rgba(222,241,232,.055);--glass-strong:rgba(222,241,232,.105);--glass-line:rgba(239,253,246,.2);--glass-bright:rgba(255,255,255,.32);--glass-shadow:rgba(0,0,0,.32)}
+:root[data-theme="light"]{--bg:#efeee9;--bg-elevated:transparent;--bg-soft:transparent;--card:transparent;--card-hover:transparent;--ink:#1b2423;--ink-strong:#0e1716;--muted:#586663;--muted-soft:#70817b;--gold:#876a46;--gold-soft:#ad8b5e;--line:rgba(28,52,47,.14);--line-strong:rgba(28,52,47,.23);--header-glass:rgba(238,242,237,.58);--glass-base:rgba(255,255,255,.42);--glass-strong:rgba(255,255,255,.67);--glass-line:rgba(255,255,255,.78);--glass-bright:rgba(255,255,255,.93);--glass-shadow:rgba(56,70,63,.13)}
 body{background:var(--bg)}
 body::before,body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none}
 body::before{background:radial-gradient(ellipse 75% 36% at 48% -9%,#293434 0%,transparent 80%),radial-gradient(ellipse 65% 43% at 100% 77%,rgba(139,111,68,.105),transparent 80%),linear-gradient(155deg,#0d1214 0%,#141b1b 48%,#101516 100%)}
@@ -363,7 +363,7 @@ body::after{background:radial-gradient(ellipse 75% 38% at 48% -9%,#fffef7 0%,tra
 .section-topline .topline-rule{background:linear-gradient(90deg,var(--line),transparent)}
 html[dir="rtl"] .section-topline .topline-rule{background:linear-gradient(-90deg,var(--line),transparent)}
 
-/* Header: separate liquid-glass controls */
+/* Header: symbols only, with a real frosted dock */
 .site-header{background:var(--header-glass);border-bottom:1px solid var(--glass-line);backdrop-filter:blur(26px) saturate(175%);-webkit-backdrop-filter:blur(26px) saturate(175%)}
 .site-header.scrolled,.site-header.menu-open{background:var(--header-glass);border-bottom-color:var(--glass-line);box-shadow:0 18px 50px var(--glass-shadow)}
 .header-inner{display:grid;grid-template-columns:1fr auto 1fr;min-height:88px}
@@ -374,11 +374,11 @@ html[dir="rtl"] .section-topline .topline-rule{background:linear-gradient(-90deg
 .desktop-nav a::after{left:50%;inset-inline-start:auto;bottom:1px;width:115%;height:2px;transform:translateX(-50%) scaleX(0);transform-origin:center;background:linear-gradient(90deg,transparent 0%,var(--gold-soft) 23%,#fff6d9 50%,var(--gold-soft) 77%,transparent 100%);box-shadow:0 0 6px var(--gold),0 0 18px rgba(236,202,136,.7),0 0 34px rgba(236,202,136,.35);border-radius:5px}
 .desktop-nav a:hover::before,.desktop-nav a.active::before{opacity:1;transform:translateX(-50%) scale(1)}
 .desktop-nav a:hover::after,.desktop-nav a.active::after{transform:translateX(-50%) scaleX(1)}
-.header-actions{justify-self:end;display:flex;align-items:center;gap:12px;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
-.utility-button,.header-contact,.menu-button{position:relative;isolation:isolate;flex:none;width:46px;height:46px;min-height:0;display:grid;place-items:center;border-radius:50%;padding:0;color:var(--ink);cursor:pointer;transition:transform .35s ease,box-shadow .35s ease,color .35s ease}
-.utility-button:hover,.header-contact:hover,.menu-button:hover{transform:translateY(-4px) scale(1.055);color:var(--ink);box-shadow:inset 0 2px 1px var(--liquid-glint),inset 2px 0 2px var(--liquid-edge),inset 0 -3px 5px var(--liquid-inset),0 0 0 1px var(--liquid-outline),0 13px 18px -6px var(--liquid-shadow),0 0 18px rgba(217,188,135,.24)}
-.utility-button:active,.header-contact:active,.menu-button:active{transform:translateY(1px) scale(.96)}
-.utility-button svg,.header-contact svg{width:21px;height:21px;position:relative;z-index:2;filter:drop-shadow(0 1px 1px rgba(0,0,0,.18))}
+.header-actions{justify-self:end;display:flex;align-items:center;gap:8px;padding:6px;border-radius:999px;background:linear-gradient(145deg,var(--glass-strong),var(--glass-base) 65%,transparent);border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 var(--glass-bright),0 10px 28px var(--glass-shadow);backdrop-filter:blur(24px) saturate(175%);-webkit-backdrop-filter:blur(24px) saturate(175%)}
+.utility-button,.header-contact,.menu-button{position:relative;flex:none;width:42px;height:42px;min-height:0;display:grid;place-items:center;border-radius:50%;padding:0;background:linear-gradient(145deg,var(--glass-strong),var(--glass-base) 68%,transparent);border:1px solid var(--glass-line);color:var(--ink);box-shadow:inset 0 1px 0 var(--glass-bright),inset 0 -1px 0 var(--line),0 3px 11px var(--glass-shadow);backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);transition:transform .3s,box-shadow .3s,background .3s,border-color .3s}
+.utility-button::before,.header-contact::before,.menu-button::before,.glass-icon::before{content:"";position:absolute;inset:1px;border-radius:inherit;background:radial-gradient(ellipse at 22% 0%,rgba(255,255,255,.24),transparent 62%);opacity:.6;pointer-events:none}
+.utility-button:hover,.header-contact:hover,.menu-button:hover{transform:translateY(-2px);background:linear-gradient(145deg,var(--glass-strong),var(--glass-base));border-color:var(--gold);color:var(--ink);box-shadow:inset 0 1px 0 var(--glass-bright),0 7px 19px var(--glass-shadow)}
+.utility-button svg,.header-contact svg{width:20px;height:20px;position:relative;z-index:1}
 .theme-button svg{width:19px;height:19px}
 .header-contact{gap:0}
 .menu-button{display:none}
@@ -405,33 +405,7 @@ html[lang="ar"] .card-content h3{font-size:clamp(39px,4.2vw,66px);line-height:1.
 .hero-meta{gap:8px}
 .hero-meta>span:not(.meta-divider){display:inline-flex;align-items:center;min-height:30px;padding:7px 11px;border:1px solid var(--glass-line);border-radius:9px;background:var(--glass-base);backdrop-filter:blur(17px) saturate(170%);-webkit-backdrop-filter:blur(17px) saturate(170%);box-shadow:inset 0 1px 0 var(--glass-bright)}
 .hero-meta .meta-divider{display:none}
-.glass-icon,.link-arrow,.journey-glyph,.expertise-star,.footer-arrow{position:relative;isolation:isolate;display:grid;place-items:center;flex:none;color:var(--gold);overflow:hidden}
-/* A raised, refractive lens: translucent body, bright rim, lower bevel, and a curved glint. */
-:is(.utility-button,.header-contact,.menu-button,.glass-icon,.link-arrow,.journey-glyph,.expertise-star,.footer-arrow,.statement-symbol,.journey-index,.about-small-note .note-symbol,.contact-email span:last-child){
-  position:relative;isolation:isolate;overflow:hidden;
-  background:radial-gradient(ellipse 95% 75% at 50% 118%,var(--liquid-bottom),transparent 72%),linear-gradient(155deg,var(--liquid-top),var(--liquid-base) 55%,var(--liquid-bottom));
-  border:1px solid var(--liquid-rim);
-  box-shadow:inset 0 2px 1px var(--liquid-glint),inset 2px 0 2px var(--liquid-edge),inset -1px 0 1px var(--liquid-edge),inset 0 -3px 5px var(--liquid-inset),0 0 0 1px var(--liquid-outline),0 9px 14px -6px var(--liquid-shadow),0 18px 22px -15px var(--liquid-shadow);
-  backdrop-filter:blur(17px) saturate(175%) contrast(1.05);
-  -webkit-backdrop-filter:blur(17px) saturate(175%) contrast(1.05);
-}
-:is(.utility-button,.header-contact,.menu-button,.glass-icon,.link-arrow,.journey-glyph,.expertise-star,.footer-arrow,.statement-symbol,.journey-index,.about-small-note .note-symbol,.contact-email span:last-child)::before{
-  content:"";position:absolute;inset:2px;border-radius:inherit;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 110% 75% at 12% -15%,var(--liquid-glint),transparent 70%);
-  opacity:.78;
-}
-:is(.utility-button,.header-contact,.menu-button,.glass-icon,.link-arrow,.journey-glyph,.expertise-star,.footer-arrow,.statement-symbol,.journey-index,.about-small-note .note-symbol,.contact-email span:last-child)::after{
-  content:"";position:absolute;top:5px;left:7px;width:35%;height:24%;z-index:0;pointer-events:none;
-  border-top:2px solid var(--liquid-glint);border-left:1px solid var(--liquid-glint);
-  border-radius:100% 30% 15% 20%;transform:rotate(-24deg);filter:blur(.25px);opacity:.85;
-}
-button.utility-button:hover,a.header-contact:hover,button.menu-button:hover{
-  background:radial-gradient(ellipse 95% 75% at 50% 118%,var(--liquid-bottom),transparent 72%),linear-gradient(155deg,var(--liquid-glint),var(--liquid-base) 62%,var(--liquid-bottom));
-  box-shadow:inset 0 2px 1px var(--liquid-glint),inset 2px 0 2px var(--liquid-edge),inset 0 -3px 5px var(--liquid-inset),0 0 0 1px var(--liquid-outline),0 13px 18px -6px var(--liquid-shadow),0 0 18px rgba(217,188,135,.24);
-}
-.glass-icon svg{position:relative;z-index:2}
-.menu-button span{z-index:2}
-.portrait-index,.hero-meta>span:not(.meta-divider){background:linear-gradient(155deg,var(--liquid-top),var(--liquid-base) 65%,var(--liquid-bottom));border-color:var(--liquid-rim);box-shadow:inset 0 1px 0 var(--liquid-glint),inset 0 -2px 4px var(--liquid-inset),0 8px 18px -8px var(--liquid-shadow)}
+.glass-icon,.link-arrow,.journey-glyph,.expertise-star,.footer-arrow{position:relative;display:grid;place-items:center;flex:none;background:linear-gradient(145deg,var(--glass-strong),var(--glass-base) 65%,transparent);border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 var(--glass-bright),0 7px 22px var(--glass-shadow);backdrop-filter:blur(17px) saturate(180%);-webkit-backdrop-filter:blur(17px) saturate(180%);color:var(--gold);overflow:hidden}
 .link-arrow{width:29px;height:29px;border-radius:10px;font-size:16px}
 .text-link{border-bottom:0;gap:12px}
 .text-link::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 8px rgba(224,185,118,.4)}
@@ -501,18 +475,10 @@ html[lang="en"] .card-content h3{font-size:clamp(42px,4.3vw,67px)}
 .contact-title{color:var(--ink-strong)}
 .contact-title em{color:var(--gold)}
 .contact-bottom p,.contact-extra{color:var(--muted)}
-.contact-email span:last-child{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;border:1px solid var(--liquid-rim);background:radial-gradient(ellipse 95% 75% at 50% 118%,var(--liquid-bottom),transparent 72%),linear-gradient(155deg,var(--liquid-top),var(--liquid-base) 55%,var(--liquid-bottom));box-shadow:inset 0 2px 1px var(--liquid-glint),inset 0 -3px 5px var(--liquid-inset),0 0 0 1px var(--liquid-outline),0 9px 14px -6px var(--liquid-shadow);font-size:22px}
+.contact-email span:last-child{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;border:1px solid var(--glass-line);background:var(--glass-strong);box-shadow:inset 0 1px 0 var(--glass-bright);font-size:22px}
 .site-footer{border-top:0}
 .footer-inner{border-top:1px solid var(--line);color:var(--muted)}
 .footer-arrow{width:32px;height:32px;border-radius:10px;font-size:18px}
-
-/* Carry the same polished material through the larger surfaces. */
-:is(.leadership-card,.statement-inner,.journey-item,.expertise-item,.contact-inner){
-  background:radial-gradient(ellipse 83% 80% at 5% -28%,var(--liquid-panel-glow),transparent 83%),linear-gradient(128deg,var(--glass-strong),var(--glass-base) 54%,transparent);
-  box-shadow:inset 0 2px 1px var(--glass-bright),inset 0 0 0 1px var(--liquid-outline),inset 0 -2px 4px var(--liquid-inset),0 20px 55px -12px var(--glass-shadow);
-}
-.about-copy-glass{box-shadow:inset 0 2px 1px rgba(255,255,255,.46),inset 0 0 0 1px rgba(255,255,255,.1),inset 0 -2px 5px rgba(0,0,0,.3),0 22px 60px rgba(0,0,0,.24)}
-.leadership-card:hover,.journey-item:hover,.expertise-item:hover{box-shadow:inset 0 2px 1px var(--glass-bright),inset 0 0 0 1px var(--liquid-outline),inset 0 -2px 4px var(--liquid-inset),0 25px 65px -12px var(--glass-shadow),0 0 35px rgba(211,173,106,.11)}
 
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .header-actions,.utility-button,.header-contact,.menu-button,.glass-icon,.about-copy-glass,.leadership-card,.statement-inner,.journey-item,.expertise-item,.contact-inner{background:var(--bg)}
@@ -549,8 +515,8 @@ html[lang="en"] .card-content h3{font-size:clamp(42px,4.3vw,67px)}
 }
 @media(max-width:700px){
   .header-inner{min-height:72px}
-  .header-actions{padding:0;gap:8px}
-  .utility-button,.header-contact,.menu-button{width:39px;height:39px}
+  .header-actions{padding:4px;gap:5px}
+  .utility-button,.header-contact,.menu-button{width:36px;height:36px}
   .utility-button svg,.header-contact svg,.theme-button svg{width:17px;height:17px}
   .menu-button span{left:9px;top:12px}
   .menu-button span:last-child{left:13px;top:23px}
