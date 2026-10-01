@@ -65,15 +65,12 @@ html[dir="rtl"] .hero:before{background:radial-gradient(ellipse 44% 45% at 31% 4
 @keyframes ambient-breathe{from{transform:scale(.97);opacity:.74}to{transform:scale(1.04);opacity:1}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(26px,5vw,105px);position:relative}
 .hero-copy{position:relative;z-index:4;padding-block:30px 70px}
-.eyebrow,.kicker,.small-overline,.card-overline{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:11px;font-weight:500;letter-spacing:.09em}
-html[lang="en"] .eyebrow,html[lang="en"] .kicker,html[lang="en"] .small-overline,html[lang="en"] .card-overline{text-transform:uppercase;letter-spacing:.2em;font-size:10px}
-.eyebrow-line{display:block;width:32px;height:1px;background:var(--gold)}
+.kicker,.small-overline,.card-overline{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:11px;font-weight:500;letter-spacing:.09em}
+html[lang="en"] .kicker,html[lang="en"] .small-overline,html[lang="en"] .card-overline{text-transform:uppercase;letter-spacing:.2em;font-size:10px}
 .hero-title{margin:35px 0 0;font-size:clamp(58px,6.4vw,113px);font-weight:300;line-height:1.22;letter-spacing:-.08em;color:var(--ink-strong)}
 .hero-person{display:block}
 .hero-person br{display:block}
-.hero-accent{display:block;color:var(--gold);font-size:.55em;font-weight:300;line-height:1.5;letter-spacing:0;margin-block-start:8px;white-space:nowrap;text-wrap:balance}
 html[lang="en"] .hero-title{font-family:Cormorant,Georgia,serif;line-height:.86;font-size:clamp(76px,7vw,125px);letter-spacing:-.055em;font-weight:400}
-html[lang="en"] .hero-accent{font-style:italic;font-size:.61em;line-height:1.2;margin-block-start:13px;letter-spacing:-.025em}
 .hero-intro{margin-block-start:32px;display:flex;align-items:end;gap:30px;max-width:600px}
 .hero-intro p{border-inline-start:1px solid var(--gold);padding-inline-start:22px;margin:0;max-width:360px;color:var(--muted);font-size:14px;line-height:2.15;font-weight:300}
 html[lang="en"] .hero-intro p{font-size:12px;line-height:1.9}
@@ -294,10 +291,7 @@ html[lang="en"] .contact-title em{font-style:italic}
   .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:20px}
   .hero-copy{padding:0;order:0}
   .hero-title{font-size:clamp(57px,12vw,92px);line-height:1.24;margin-block-start:20px}
-  .hero-accent{font-size:.54em;margin-block-start:4px}
-  .hero-accent{white-space:normal}
   html[lang="en"] .hero-title{font-size:clamp(69px,13vw,106px);line-height:.82}
-  html[lang="en"] .hero-accent{margin-block-start:13px}
   .hero-intro{margin-block-start:22px}
   .hero-intro p{font-size:12px;max-width:440px;line-height:2;padding-inline-start:16px}
   html[lang="en"] .hero-intro p{font-size:11px}
@@ -409,7 +403,6 @@ html[lang="en"] .desktop-nav a{font-size:12px}
 /* Portrait and typography */
 html[lang="ar"] .hero-title,html[lang="ar"] .section-title,html[lang="ar"] .contact-title,html[lang="ar"] .statement-quote,html[lang="ar"] .card-content h3{font-family:Amiri,"IBM Plex Sans Arabic",serif;font-weight:400;letter-spacing:0}
 html[lang="ar"] .hero-title{font-size:clamp(77px,7.8vw,135px);line-height:1.07}
-html[lang="ar"] .hero-accent{font-size:.64em;line-height:1.25;margin-block-start:10px}
 html[lang="ar"] .section-title{font-size:clamp(62px,6.1vw,105px);line-height:1.16}
 html[lang="ar"] .contact-title{font-size:clamp(82px,9.5vw,155px);line-height:1.1}
 html[lang="ar"] .statement-quote{font-size:clamp(42px,5vw,72px);line-height:1.45}
@@ -557,7 +550,6 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
   .menu-button[aria-expanded="true"] span:last-child{left:9px}
   .mobile-nav{inset-block-start:72px;min-height:calc(100svh - 72px)}
   html[lang="ar"] .hero-title{font-size:clamp(66px,13.5vw,92px);line-height:1.1}
-  html[lang="ar"] .hero-accent{font-size:.64em}
   html[lang="ar"] .section-title{font-size:clamp(54px,11vw,82px);line-height:1.16}
   html[lang="ar"] .contact-title{font-size:clamp(72px,14vw,112px)}
   .hero-meta{gap:6px}
