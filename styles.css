@@ -79,12 +79,12 @@ html[lang="en"] .hero-intro p{font-size:12px;line-height:1.9}
 .text-link:hover .link-arrow{transform:translate(3px,-3px)}
 html[dir="rtl"] .text-link:hover .link-arrow{transform:scaleX(-1) translate(3px,-3px)}
 .hero-positions{max-width:560px;margin-block-start:24px}
-html[dir="rtl"] .hero-positions{width:fit-content;max-width:min(560px,calc(100% - 16px));margin-inline-start:16px}
+html[dir="rtl"] .hero-positions{width:fit-content;max-width:min(560px,calc(100% - 36px));margin-inline-start:36px}
 .hero-positions h2{margin:0 0 9px;color:var(--gold);font-size:11px;font-weight:500;letter-spacing:.09em}
 .hero-positions-list{display:grid;gap:5px;margin:0;padding:0;list-style:none}
 .hero-positions-list li{position:relative;padding-inline-start:13px;color:var(--muted-soft);font-size:12px;line-height:1.55}
 .hero-positions-list li::before{content:"";position:absolute;inset-inline-start:0;top:.78em;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.78}
-.hero-positions-previous{margin-block-start:9px;padding-block-start:9px;border-block-start:1px solid var(--line)}
+.hero-positions-previous{margin-block-start:12px}
 html[lang="en"] .hero-positions h2{text-transform:uppercase;letter-spacing:.15em;font-size:10px}
 html[lang="en"] .hero-positions-list li{font-size:11px;letter-spacing:.015em}
 .hero-visual{height:min(70vw,695px);min-height:600px;max-height:740px;position:relative;align-self:center}
