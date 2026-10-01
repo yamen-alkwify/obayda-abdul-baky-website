@@ -95,7 +95,6 @@
     scopeSevenTitle: 'Crisis management',
     scopeSevenDesc: 'Crisis response.',
     sectionProjects: 'Project experience',
-    projectKicker: 'Experience in practice',
     projectTitle: 'From planning to <em>places taking shape.</em>',
     projectIntro: 'Professional work recorded across real estate, tourism, housing and urban planning.',
     projectOneCategory: 'Tourism & hospitality',
