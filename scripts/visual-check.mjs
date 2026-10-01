@@ -46,7 +46,7 @@ try {
             pageWidth: document.documentElement.scrollWidth,
             viewportWidth: innerWidth,
             titleClipped: title.scrollWidth > title.clientWidth + 1,
-            projectOptions: document.querySelectorAll('.project-preview-heading').length,
+            projectItems: document.querySelectorAll('.project-text-mosaic-item').length,
             photoLoaded: photo.complete && photo.naturalWidth > 0,
             glassBlur: getComputedStyle(glass).backdropFilter,
           };
@@ -82,4 +82,4 @@ try {
 }
 
 console.log(JSON.stringify({ output, results }, null, 2));
-if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || result.projectOptions !== 3 || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
+if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || result.projectItems !== 6 || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
