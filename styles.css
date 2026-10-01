@@ -730,7 +730,7 @@ html[lang="en"] #projects-title{font-size:clamp(14px,3.1vw,48px);line-height:1.0
 .project-text-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,5vw,74px);row-gap:0;max-width:1280px;margin-inline:auto}
 .project-text-mosaic-item{display:grid;grid-template-columns:30px minmax(0,1fr);align-items:start;gap:11px;padding:20px 10px 21px;border-block-end:1px solid color-mix(in srgb,var(--line) 72%,transparent);transition:background .28s,border-color .28s}
 .project-text-mosaic-item:hover{background:color-mix(in srgb,var(--glass-base) 24%,transparent)}
-.project-mosaic-number{padding-block-start:2px;color:var(--muted-soft);font:10px Manrope,Arial,sans-serif;letter-spacing:.08em}
+.project-mosaic-number{display:block;inline-size:max-content;min-inline-size:2ch;padding-block-start:2px;color:var(--muted-soft);font:10px Manrope,Arial,sans-serif;letter-spacing:.08em;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
 .project-text-mosaic-item>div{min-width:0}
 .project-text-mosaic-item .project-category{display:block;margin-block-end:4px;color:var(--muted-soft);font-size:9px;letter-spacing:.035em}
 .project-text-mosaic-item h4{margin:0 0 5px;color:var(--ink);font-size:clamp(18px,1.65vw,22px);font-weight:400;line-height:1.4}
