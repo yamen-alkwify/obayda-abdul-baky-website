@@ -627,7 +627,7 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
 .training-heading p{margin:0;max-width:500px;color:var(--muted);font-size:12px;line-height:1.9}
 .scope-grid{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
 .scope-item{position:relative;width:fit-content;max-width:100%;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:3px;padding-block:12px;padding-inline-start:17px}
-html[dir="rtl"] .scope-item{margin-inline-start:16px}
+html[dir="rtl"] .scope-item{margin-inline-start:36px}
 .scope-item::before{content:"";position:absolute;inset-inline-start:1px;top:calc(12px + .82em);width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 11%,transparent)}
 .scope-item h4::before,.scope-item p::before{content:"—";display:inline-block;margin-inline-end:.5em;color:var(--gold);font-family:Manrope,Arial,sans-serif;font-size:.78em;font-weight:300;opacity:.72}
 .project-card,.training-card{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--glass-line);border-radius:21px;background:linear-gradient(135deg,var(--glass-strong),var(--glass-base) 70%,rgba(255,255,255,.012));box-shadow:inset 0 1px 0 var(--glass-bright),0 12px 36px var(--glass-shadow);backdrop-filter:blur(20px) saturate(155%);-webkit-backdrop-filter:blur(20px) saturate(155%);transition:transform .35s,border-color .35s,box-shadow .35s}
@@ -681,7 +681,7 @@ html[lang="en"] .scope-years-number{font-family:Manrope,Arial,sans-serif}
   .experience-record-heading{display:block;margin-block-end:14px;padding-block-end:17px}
   .experience-record-heading h3{margin-block-start:8px}
   .scope-item{column-gap:7px;row-gap:1px;padding-block:10px}
-  html[dir="rtl"] .scope-item{margin-inline-start:12px}
+  html[dir="rtl"] .scope-item{margin-inline-start:28px}
   .scope-item::before{top:calc(10px + .82em)}
   .scope-period{font-size:11px}
   .scope-years-number{font-size:1.2em}
