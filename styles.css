@@ -629,8 +629,7 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
 .experience-record{margin-block-start:62px}
 .experience-record-heading{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:max-content;max-width:100%;margin-block-end:22px;padding-block-end:0;border:0;text-align:start}
 .experience-record-heading::after{content:"";align-self:flex-start;width:68px;height:1px;margin-block-start:9px;background:linear-gradient(90deg,transparent,var(--line-strong));opacity:.72}
-.experience-record-heading h3,.training-heading h3{margin:10px 0 8px;color:var(--ink-strong);font-size:clamp(28px,3vw,43px);font-weight:300;letter-spacing:-.035em;line-height:1.35}
-.training-heading p{margin:0;max-width:500px;color:var(--muted);font-size:12px;line-height:1.9}
+.experience-record-heading h3{margin:10px 0 8px;color:var(--ink-strong);font-size:clamp(28px,3vw,43px);font-weight:300;letter-spacing:-.035em;line-height:1.35}
 .scope-grid{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
 .scope-item{position:relative;width:fit-content;max-width:100%;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:3px;padding-block:12px;padding-inline-start:17px}
 html[dir="rtl"] .scope-item{margin-inline-start:36px}
@@ -663,10 +662,6 @@ html[lang="en"] .scope-years-number{font-family:Manrope,Arial,sans-serif}
 .project-card::after{content:"";position:absolute;inset-inline-end:-44px;inset-block-start:-68px;width:132px;height:132px;border:1px solid var(--glass-line);border-radius:50%;z-index:-1;opacity:.42}
 .project-card h3{max-width:340px;margin:0 0 10px;color:var(--ink-strong);font-size:clamp(21px,2.1vw,29px);font-weight:300;line-height:1.45;letter-spacing:-.025em}
 .training-block{margin-block-start:105px}
-.training-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.7fr);align-items:end;column-gap:38px;margin-block-end:27px}
-.training-heading .kicker{grid-column:1/-1}
-.training-heading h3{margin-block-start:8px}
-.training-heading p{margin-block-end:9px}
 .training-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
 .training-card{min-height:160px;padding:24px 24px}
 .personal-profile{margin-block-start:63px;padding-block-start:34px;border-top:1px solid var(--line)}
@@ -698,11 +693,10 @@ html[lang="en"] .scope-years-number{font-family:Manrope,Arial,sans-serif}
   html[lang="en"] .scope-item h4{font-size:clamp(18px,4.5vw,21px)}
   .scope-item p{font-size:11px;line-height:1.5}
   .project-section{padding-block-start:65px}
-  .project-heading,.training-heading{display:block;margin-block-end:25px}
+  .project-heading{display:block;margin-block-end:25px}
   .project-heading>p{margin-block-start:23px}
   .project-card{min-height:190px;padding:24px}
   .training-block{margin-block-start:75px}
-  .training-heading p{margin-block-start:12px}
   .training-card{min-height:0;padding:21px}
   .personal-profile{margin-block-start:48px;padding-block-start:26px}
   .skill-tags{gap:8px}
