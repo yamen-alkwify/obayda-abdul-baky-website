@@ -733,3 +733,47 @@ html[lang="en"] #journey-title{font-size:clamp(16px,4.2vw,58px);line-height:1}
   html[dir="rtl"] body.js-ready .journey-item.reveal.visible{transform:translate(0,0)}
   html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:translateY(-3px)}
 }
+
+/* Three quiet mosaic studies for project experience */
+.project-preview-heading{display:flex;align-items:center;gap:12px;margin-block:clamp(43px,6vw,70px) 18px}
+.project-preview-no{color:var(--muted-soft);font:10px Manrope,Arial,sans-serif;letter-spacing:.1em}
+.project-preview-heading h3{margin:0;color:var(--ink);font-size:clamp(16px,1.55vw,20px);font-weight:400;line-height:1.5}
+.project-mosaic-grid.project-mosaic-grid--tiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.project-mosaic-grid--tiles .project-card{min-height:164px;padding:21px 22px;border:1px solid rgba(239,253,246,.1);border-radius:19px;background:linear-gradient(135deg,rgba(222,241,232,.045),rgba(222,241,232,.018));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 7px 20px rgba(0,0,0,.08);backdrop-filter:blur(12px) saturate(115%);-webkit-backdrop-filter:blur(12px) saturate(115%);transition:transform .3s,border-color .3s,background .3s}
+.project-mosaic-grid--tiles .project-card:hover{transform:translateY(-2px);border-color:rgba(217,188,135,.22);background:linear-gradient(135deg,rgba(222,241,232,.06),rgba(222,241,232,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 9px 24px rgba(0,0,0,.1)}
+.project-mosaic-grid--tiles .project-card::before{opacity:.12;border-color:rgba(239,253,246,.12)}
+.project-mosaic-grid--tiles .project-card::after{opacity:.1;border-color:rgba(239,253,246,.1)}
+.project-mosaic-grid--tiles .project-category{margin-block-end:7px;color:var(--muted-soft);font-size:9px;letter-spacing:.025em}
+.project-mosaic-grid--tiles .project-card h3{margin-block-end:5px;color:var(--ink);font-size:clamp(18px,1.65vw,22px);font-weight:400;line-height:1.35}
+.project-mosaic-grid--tiles .project-card p{color:var(--muted);font-size:11px;line-height:1.65}
+:root[data-theme="light"] .project-mosaic-grid--tiles .project-card{border-color:rgba(43,49,44,.1);background:linear-gradient(135deg,rgba(255,255,255,.52),rgba(255,255,255,.24));box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 7px 20px rgba(35,32,27,.035)}
+.project-text-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,5vw,66px)}
+.project-text-mosaic-item{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:18px 7px;border-block-end:1px solid color-mix(in srgb,var(--line) 72%,transparent)}
+.project-mosaic-number{color:var(--muted-soft);font:10px Manrope,Arial,sans-serif;letter-spacing:.08em}
+.project-text-mosaic-item>div,.project-single-mosaic-item>div{min-width:0}
+.project-text-mosaic-item .project-category,.project-single-mosaic-item .project-category{display:block;margin-block-end:4px;color:var(--muted-soft);font-size:9px}
+.project-text-mosaic-item h4,.project-single-mosaic-item h4{margin:0 0 4px;color:var(--ink);font-size:clamp(17px,1.5vw,20px);font-weight:400;line-height:1.4}
+.project-text-mosaic-item p,.project-single-mosaic-item p{margin:0;color:var(--muted);font-size:11px;font-weight:300;line-height:1.7}
+.project-single-mosaic{padding:8px 17px;border:1px solid rgba(239,253,246,.095);border-radius:21px;background:rgba(222,241,232,.022);backdrop-filter:blur(9px) saturate(108%);-webkit-backdrop-filter:blur(9px) saturate(108%)}
+.project-single-mosaic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-single-mosaic-item{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:16px 13px;border-block-end:1px solid color-mix(in srgb,var(--line) 68%,transparent)}
+.project-single-mosaic-item:nth-child(odd){border-inline-end:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+.project-single-mosaic-item:nth-last-child(-n+2){border-block-end:0}
+:root[data-theme="light"] .project-single-mosaic{border-color:rgba(43,49,44,.1);background:rgba(255,255,255,.22)}
+@media(max-width:1050px){
+  .project-mosaic-grid.project-mosaic-grid--tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-text-mosaic{column-gap:24px}
+}
+@media(max-width:700px){
+  .project-preview-heading{gap:9px;margin-block:40px 14px}
+  .project-preview-heading h3{font-size:16px}
+  .project-mosaic-grid.project-mosaic-grid--tiles,.project-text-mosaic,.project-single-mosaic-grid{grid-template-columns:1fr}
+  .project-mosaic-grid--tiles .project-card{min-height:142px;padding:19px 20px}
+  .project-mosaic-grid--tiles .project-card h3{font-size:19px}
+  .project-text-mosaic-item{padding:15px 4px}
+  .project-single-mosaic{padding:7px 10px;border-radius:18px}
+  .project-single-mosaic-item{padding:14px 8px}
+  .project-single-mosaic-item:nth-child(odd){border-inline-end:0}
+  .project-single-mosaic-item:nth-last-child(2){border-block-end:1px solid color-mix(in srgb,var(--line) 68%,transparent)}
+  .project-single-mosaic-item:last-child{border-block-end:0}
+}

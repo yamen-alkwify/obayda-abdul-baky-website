@@ -46,6 +46,7 @@ try {
             pageWidth: document.documentElement.scrollWidth,
             viewportWidth: innerWidth,
             titleClipped: title.scrollWidth > title.clientWidth + 1,
+            projectOptions: document.querySelectorAll('.project-preview-heading').length,
             photoLoaded: photo.complete && photo.naturalWidth > 0,
             glassBlur: getComputedStyle(glass).backdropFilter,
           };
@@ -56,7 +57,7 @@ try {
             (viewportName === 'mobile' && language === 'ar' && theme === 'dark')) {
           await page.screenshot({ path: join(output, `${tag}-viewport.png`) });
           await page.screenshot({ path: join(output, `${tag}-full.png`), fullPage: true });
-          for (const section of ['about', 'leadership', 'journey', 'expertise', 'contact']) {
+          for (const section of ['about', 'leadership', 'journey', 'projects', 'expertise', 'contact']) {
             await page.locator(`#${section}`).screenshot({ path: join(output, `${tag}-${section}.png`) });
           }
         }
@@ -81,4 +82,4 @@ try {
 }
 
 console.log(JSON.stringify({ output, results }, null, 2));
-if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
+if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || result.projectOptions !== 3 || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
