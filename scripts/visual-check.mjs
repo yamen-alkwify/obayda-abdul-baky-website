@@ -38,6 +38,7 @@ try {
 
         const state = await page.evaluate(() => {
           const title = document.querySelector('.hero-title');
+          const projectTitle = document.querySelector('#projects-title');
           const photo = document.querySelector('.about-scene img');
           const glass = document.querySelector('.leadership-card');
           return {
@@ -46,6 +47,7 @@ try {
             pageWidth: document.documentElement.scrollWidth,
             viewportWidth: innerWidth,
             titleClipped: title.scrollWidth > title.clientWidth + 1,
+            projectTitleClipped: projectTitle.scrollWidth > projectTitle.clientWidth + 1,
             projectItems: document.querySelectorAll('.project-text-mosaic-item').length,
             photoLoaded: photo.complete && photo.naturalWidth > 0,
             glassBlur: getComputedStyle(glass).backdropFilter,
@@ -82,4 +84,4 @@ try {
 }
 
 console.log(JSON.stringify({ output, results }, null, 2));
-if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || result.projectItems !== 6 || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
+if (results.some(result => result.errors.length || result.pageWidth > result.viewportWidth + 1 || result.titleClipped || result.projectTitleClipped || result.projectItems !== 6 || !result.photoLoaded || result.glassBlur === 'none')) process.exitCode = 1;
