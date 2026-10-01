@@ -96,7 +96,7 @@
     scopeSevenTitle: 'Crisis management',
     scopeSevenDesc: 'Crisis response.',
     sectionProjects: 'Project experience',
-    projectTitle: 'From planning to <em>places taking shape.</em>',
+    projectTitle: 'From experience to <em>execution.</em>',
     projectIntro: 'Professional work recorded across real estate, tourism, housing and urban planning.',
     projectOneCategory: 'Tourism & hospitality',
     projectOneTitle: 'Tourism projects and restaurants in Idlib',
