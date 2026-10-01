@@ -94,13 +94,6 @@ html[dir="rtl"] .frame-corner-top{border-width:1px 1px 0 0}
 html[dir="rtl"] .frame-corner-bottom{border-width:0 0 1px 1px}
 .portrait-index{position:absolute;inset-inline-end:28px;inset-block-end:27px;z-index:3;display:flex;align-items:center;gap:13px;color:#eae5db;font:10px Manrope,Arial,sans-serif;letter-spacing:.12em;direction:ltr}
 .index-rule{width:34px;height:1px;background:#d3bd92}
-.hero-bottom{position:absolute;inset-block-end:26px;inset-inline:0;display:flex;align-items:end;justify-content:space-between;color:var(--muted-soft);font-size:10px}
-.scroll-cue{display:flex;align-items:center;gap:15px;transition:color .3s}
-.scroll-cue:hover{color:var(--gold)}
-.scroll-cue-line{position:relative;width:1px;height:55px;background:var(--line-strong);overflow:hidden}
-.scroll-cue-line:after{content:"";position:absolute;inset-inline:0;top:-60%;height:55%;background:var(--gold);animation:scrollLine 2.2s ease-in-out infinite}
-@keyframes scrollLine{to{top:110%}}
-.hero-bottom-mark{font:10px Manrope,Arial,sans-serif;letter-spacing:.18em;direction:ltr}
 
 /* Shared sections */
 .section{padding-block:126px 150px;position:relative}
@@ -286,7 +279,7 @@ html[lang="en"] .contact-title em{font-style:italic}
   .header-actions{gap:6px}
   .utility-button{width:34px;height:34px}
   .mobile-nav{inset-block-start:72px;min-height:calc(100svh - 72px)}
-  .hero{min-height:0;display:block;padding-block:110px 0}
+  .hero{min-height:0;display:block;padding-block:110px 48px}
   .hero:after{width:70vw;height:70vw;inset-block-start:42%}
   .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:20px}
   .hero-copy{padding:0;order:0}
@@ -304,8 +297,6 @@ html[lang="en"] .contact-title em{font-style:italic}
   .frame-corner-top{inset-block-start:-10px;inset-inline-start:8%}
   .frame-corner-bottom{inset-block-end:-10px;inset-inline-end:8%}
   .portrait-index{inset-inline-end:15%;inset-block-end:20px}
-  .hero-bottom{position:relative;inset:auto;padding-block:28px 20px}
-  .scroll-cue-line{height:33px}
   .section{padding-block:85px 100px}
   .section-topline{margin-block-end:58px;gap:15px}
   .section-title{font-size:clamp(48px,10vw,76px)}
@@ -595,7 +586,7 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
   .contact-inner{padding:42px 19px}
 }
 @media(prefers-reduced-motion:reduce){body::after{transition:none}}
-.portrait-index,.hero-bottom-mark,.section-number,.card-count,.journey-index,.expertise-num,.contact-index{display:none!important}
+.portrait-index,.section-number,.card-count,.journey-index,.expertise-num,.contact-index{display:none!important}
 .link-arrow,.card-arrow,.journey-glyph,.footer-arrow,.contact-email span[aria-hidden="true"]{display:none!important}
 .journey-item,.expertise-item{grid-template-columns:minmax(0,1fr)!important}
 .header-actions{gap:12px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}

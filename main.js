@@ -20,8 +20,6 @@
     heroRoleOne: 'Board Member, Syrian Sovereign Fund',
     heroRoleTwo: 'Chairman, Sham Holding Company',
     heroAlt: 'Portrait of Obayda Abdul Baky',
-    scrollAria: 'Go to the about section',
-    scroll: 'Scroll to explore',
     sectionAbout: 'About Obayda',
     aboutKicker: 'Vision shaped by action',
     aboutTitle: 'Leading with a vision<br /><em>for wider impact.</em>',
