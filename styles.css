@@ -216,24 +216,15 @@ html[dir="rtl"] .journey-item:hover .journey-glyph{transform:scaleX(-1) translat
 #expertise .expertise-heading{width:100%;max-width:none;margin-inline-start:auto;margin-block-end:54px;text-align:right}
 #expertise .expertise-heading .section-title{font-size:clamp(38px,5.5vw,78px);line-height:1.2;white-space:nowrap}
 #expertise .expertise-list{display:none}
-.expertise-proposals{display:grid;gap:46px}
-.expertise-proposal{width:min(100%,980px);margin-inline-start:auto}
-.expertise-proposal-heading{display:flex;align-items:center;gap:14px;margin-block-end:17px}
-.expertise-proposal-index{color:var(--gold);font:11px Manrope,Arial,sans-serif;letter-spacing:.16em;direction:ltr}
-.expertise-proposal-heading h3{margin:0;color:var(--muted);font-size:12px;font-weight:500;letter-spacing:.08em}
+#expertise .expertise-content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"training qualifications";gap:clamp(42px,5.5vw,86px);align-items:start}
+#expertise .training-block{grid-area:training;margin:0}
+#expertise .qualifications-column{grid-area:qualifications;min-width:0}
+#expertise .qualifications-column-title{margin:5px 0 15px;color:var(--gold);font-size:13px;font-weight:400;line-height:1.6}
 .expertise-option-list{margin:0;padding:0;list-style:none;text-align:start}
 .expertise-timeline{position:relative;display:grid;gap:0;padding-inline-start:31px}
 .expertise-timeline::before{content:"";position:absolute;inset-inline-start:5px;inset-block:9px 10px;width:1px;background:linear-gradient(to bottom,transparent,var(--line-strong) 10%,var(--line-strong) 90%,transparent)}
 .expertise-timeline li{position:relative;min-height:58px;display:flex;align-items:center;color:var(--ink);font-size:22px;line-height:1.6}
 .expertise-timeline li::before{content:"";position:absolute;inset-inline-start:-31px;top:50%;width:9px;height:9px;border:1px solid var(--gold);border-radius:50%;background:var(--bg);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 8%,transparent);transform:translateY(-50%)}
-.expertise-timeline--numbered{counter-reset:expertise-step}
-.expertise-timeline--numbered li{min-height:62px}
-.expertise-timeline--numbered li::before{counter-increment:expertise-step;content:counter(expertise-step,decimal-leading-zero);display:grid;place-items:center;inset-inline-start:-35px;top:50%;width:19px;height:19px;border:1px solid color-mix(in srgb,var(--gold) 58%,var(--line));border-radius:50%;background:var(--bg);box-shadow:none;color:var(--gold);font:8px Manrope,Arial,sans-serif;letter-spacing:0;transform:translateY(-50%)}
-.expertise-timeline--milestones{padding-inline-start:37px}
-.expertise-timeline--milestones::before{inset-inline-start:6px;width:2px;background:linear-gradient(to bottom,transparent,var(--gold) 14%,color-mix(in srgb,var(--gold) 45%,var(--line)) 86%,transparent);opacity:.5}
-.expertise-timeline--milestones li{min-height:64px}
-.expertise-timeline--milestones li::before{inset-inline-start:-37px;width:11px;height:11px;border:2px solid var(--gold);background:var(--bg);box-shadow:0 0 0 5px color-mix(in srgb,var(--gold) 7%,transparent)}
-html[lang="en"] .expertise-proposal-heading h3{font-size:10px;text-transform:uppercase;letter-spacing:.16em}
 html[lang="en"] .expertise-timeline li{font-family:Cormorant,Georgia,serif;font-size:20px}
 .expertise-list{border-top:1px solid var(--line)}
 .expertise-item{min-height:78px;display:grid;grid-template-columns:36px 1fr 18px;align-items:center;gap:17px;border-bottom:1px solid var(--line);font-size:17px;font-weight:300;transition:padding .3s,color .3s}
@@ -355,17 +346,11 @@ html[lang="en"] .contact-title em{font-style:italic}
   .expertise-heading{margin-block-end:42px}
   #expertise .expertise-heading{margin-block-end:38px}
   #expertise .expertise-heading .section-title{font-size:clamp(30px,8.5vw,43px)}
-  .expertise-proposals{gap:34px}
-  .expertise-proposal-heading{gap:11px;margin-block-end:12px}
+  #expertise .expertise-content-grid{grid-template-columns:1fr;grid-template-areas:"qualifications" "training";gap:48px}
   .expertise-timeline{padding-inline-start:26px}
   .expertise-timeline li{min-height:50px;font-size:19px}
   .expertise-timeline li::before{inset-inline-start:-26px;width:8px;height:8px}
   .expertise-timeline::before{inset-inline-start:4px}
-  .expertise-timeline--numbered li{min-height:50px}
-  .expertise-timeline--numbered li::before{inset-inline-start:-30px;width:17px;height:17px}
-  .expertise-timeline--milestones{padding-inline-start:31px}
-  .expertise-timeline--milestones li{min-height:54px}
-  .expertise-timeline--milestones li::before{inset-inline-start:-31px;width:9px;height:9px}
   .expertise-item{font-size:15px;min-height:72px;gap:11px;grid-template-columns:28px 1fr 12px}
   .expertise-section{padding-block-end:115px}
   .contact-section{padding-block:85px 80px}
@@ -694,10 +679,12 @@ html[lang="en"] .scope-years-number{font-family:Manrope,Arial,sans-serif}
 @media(max-width:1050px){
   .project-grid,.training-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .project-heading{grid-template-columns:minmax(0,1fr) minmax(220px,.55fr)}
+  #expertise .expertise-content-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
 }
 @media(max-width:700px){
   .experience-record{margin-block-start:43px}
   .scope-grid,.project-grid,.training-grid{grid-template-columns:1fr}
+  #expertise .expertise-content-grid{grid-template-columns:1fr;grid-template-areas:"qualifications" "training";gap:48px}
   .experience-record-heading{display:block;margin-block-end:14px;padding-block-end:17px}
   .experience-record-heading h3{margin-block-start:8px}
   .scope-item{column-gap:7px;row-gap:1px;padding-block:10px}
