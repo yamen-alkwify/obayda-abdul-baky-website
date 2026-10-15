@@ -466,7 +466,6 @@ html[lang="en"] .about-copy-glass p{font-size:12px;line-height:1.9}
 .leadership-card>*{position:relative;z-index:1}
 .card-logo{position:relative;display:grid;place-items:center;min-height:185px}
 .card-logo img{position:relative;z-index:1;display:block;max-width:100%;object-fit:contain;transition:transform .45s,filter .45s}
-.card-logo-fund img{width:min(100%,210px);height:210px}
 .card-logo-sham img{width:min(100%,300px);height:auto;max-height:145px;filter:brightness(0) invert(1)}
 .leadership-card:hover .card-logo img{transform:scale(1.025)}
 .card-content{position:static;align-self:center;width:min(100%,760px);text-align:center}
@@ -522,7 +521,6 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
 }
 @media(max-width:1250px){
   .leadership-card{grid-template-columns:260px minmax(0,1fr);gap:46px;padding:32px 28px}
-  .card-logo-fund img{width:min(100%,190px);height:190px}
   .card-logo-sham img{width:min(100%,280px);max-height:135px}
   .about-content{width:min(53%,590px)}
 }
@@ -535,7 +533,6 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
   .about-content{width:54%}
   .leadership-card{grid-template-columns:220px minmax(0,1fr);gap:34px}
   .card-logo{min-height:165px}
-  .card-logo-fund img{width:min(100%,174px);height:174px}
   .card-logo-sham img{width:min(100%,260px);max-height:125px}
   #leadership-title{font-size:clamp(27px,4vw,42px)}
   html[lang="en"] #leadership-title{font-size:clamp(28px,4vw,42px)}
@@ -578,7 +575,6 @@ html[dir="rtl"] body.js-ready .journey-item.reveal.visible:hover{transform:trans
   .leadership-heading{margin-block-end:32px}
   .leadership-card{min-height:0;grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:25px;padding:28px 23px;border-radius:23px}
   .card-logo{min-height:145px}
-  .card-logo-fund img{width:130px;height:130px}
   .card-logo-sham img{width:min(100%,270px);max-height:132px}
   .card-content{width:100%}
   .card-overline{inset-block-start:17px;left:18px;font-size:9px}
@@ -769,4 +765,119 @@ html[lang="en"] #contact .contact-option-title em{font-style:italic}
   #contact .contact-option-title{font-size:clamp(42px,10.5vw,60px);line-height:1.22}
   #contact .contact-option-copy .contact-email{font-size:clamp(14px,3.8vw,18px)}
   #contact .contact-option-details{gap:13px;margin-block-start:17px}
+}
+
+/* Cleaner qualifications layout and more readable supporting copy */
+#expertise .expertise-content-grid{display:block}
+#expertise .qualifications-column{max-width:1000px;margin-inline:auto}
+#expertise .expertise-option-list.expertise-timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;padding:0}
+#expertise .expertise-timeline::before{display:none}
+#expertise .expertise-timeline li{min-height:78px;padding-block:15px;padding-inline:38px 20px;border:1px solid var(--glass-line);border-inline-start:2px solid var(--gold);border-radius:15px;background:linear-gradient(130deg,var(--glass-strong),var(--glass-base) 72%,rgba(255,255,255,.012));font-size:20px;line-height:1.5}
+#expertise .expertise-timeline li::before{inset-inline-start:18px;width:7px;height:7px}
+
+html[lang="ar"] .statement-quote{font-size:clamp(40px,4.5vw,64px)}
+html[lang="en"] .statement-quote{font-size:clamp(41px,4.7vw,68px)}
+.kicker,.small-overline,.card-overline,.section-topline,.hero-positions h2,
+.project-category,.project-text-mosaic-item .project-category,#contact .contact-option-head>.kicker{font-size:12px}
+.section-number,.project-mosaic-number,.footer-inner,.contact-extra,.scope-period,
+#contact .contact-option-details{font-size:13px}
+.desktop-nav a,.header-contact,.lang-button{font-size:14px}
+.text-link,.hero-positions-list li,.card-role{font-size:15px}
+.hero-intro p,.about-text p,.about-copy-glass p,.leadership-heading p,.card-note,
+.journey-heading p,.journey-item p,.scope-item p,.project-heading>p,.project-card p,
+.project-text-mosaic-item p,.expertise-heading p,#contact .contact-option-copy p{font-size:15px}
+.about-small-note{font-size:13px}
+.statement-label{font-size:14px}
+#expertise .qualifications-column-title{font-size:15px}
+#contact .contact-option-copy .contact-email{font-size:clamp(17px,1.65vw,26px)}
+
+@media(max-width:700px){
+  #expertise .expertise-option-list.expertise-timeline{grid-template-columns:1fr;gap:10px}
+  #expertise .expertise-timeline li{min-height:66px}
+  html[lang="ar"] .statement-quote{font-size:clamp(34px,8vw,48px)}
+  html[lang="en"] .statement-quote{font-size:clamp(39px,8.5vw,56px)}
+  .hero-intro p,.about-text p,.about-copy-glass p,.leadership-heading p,.card-note,
+  .journey-heading p,.journey-item p,.scope-item p,.project-heading>p,.project-card p,
+  .project-text-mosaic-item p,.expertise-heading p,#contact .contact-option-copy p{font-size:14px}
+  .about-small-note{font-size:13px}
+  .project-mosaic-number{font-size:12px}
+  #contact .contact-option-copy .contact-email{font-size:clamp(16px,4vw,20px)}
+}
+
+/* Stronger readability pass */
+html[lang="ar"] .statement-quote{font-size:clamp(34px,3.5vw,48px)}
+html[lang="en"] .statement-quote{font-size:clamp(36px,3.7vw,52px)}
+.kicker,.small-overline,.card-overline,.section-topline,.hero-positions h2,
+.project-category,.project-text-mosaic-item .project-category,#contact .contact-option-head>.kicker{font-size:14px}
+.section-number,.project-mosaic-number,.footer-inner,.contact-extra,.scope-period,
+#contact .contact-option-details{font-size:15px}
+.desktop-nav a,.header-contact,.lang-button{font-size:16px}
+.text-link,.hero-positions-list li,.card-role{font-size:17px}
+.hero-intro p,.about-text p,.about-copy-glass p,.leadership-heading p,.card-note,
+.journey-heading p,.journey-item p,.scope-item p,.project-heading>p,.project-card p,
+.project-text-mosaic-item p,.expertise-heading p,#contact .contact-option-copy p{font-size:17px}
+.about-small-note{font-size:15px}
+.statement-label{font-size:16px}
+#expertise .qualifications-column-title{font-size:17px}
+.expertise-num{font-size:16px}
+#contact .contact-option-copy .contact-email{font-size:clamp(19px,1.8vw,27px)}
+.card-logo-housing{--logo-source:url("assets/images/housing-administration-logo.png");--logo-width:280px;--logo-ratio:3896 / 3088}
+.card-logo-asl{--logo-source:url("assets/images/asl-company-logo.png");--logo-width:310px;--logo-ratio:1200 / 158}
+.card-logo-housing img{width:min(100%,280px);height:auto;max-height:235px;opacity:0}
+.card-logo-asl img{width:min(100%,310px);height:auto;max-height:170px;opacity:0}
+/* Invert a luminance mask to display the supplied ink without its white page. */
+.card-logo-housing::before,.card-logo-asl::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,var(--logo-width));aspect-ratio:var(--logo-ratio);background:var(--ink-strong);clip-path:inset(1px);mask-image:var(--logo-source),linear-gradient(#fff,#fff),var(--logo-source);mask-mode:alpha,alpha,luminance;mask-composite:intersect,subtract;mask-size:100% 100%;mask-position:center;mask-repeat:no-repeat}
+.card-logo-ministry img{width:min(100%,240px);height:auto;max-height:205px}
+#leadership .card-content{position:static;display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
+#leadership .card-overline,#leadership .card-role,#leadership .card-content h3{margin:0}
+#leadership .card-role{line-height:1.6}
+#leadership .card-content h3{padding-block:.12em;line-height:1.5;overflow:visible}
+#leadership .card-note{width:100%;max-width:640px;margin:12px auto 0;padding-block-start:14px;line-height:1.8}
+html[lang="en"] #leadership .leadership-card-housing h3,html[lang="en"] #leadership .leadership-card-ministry h3{font-size:clamp(30px,3.2vw,48px)}
+.hero-positions-highlighted{gap:9px}
+.hero-positions-highlighted li{padding-inline-start:24px}
+.hero-positions-highlighted li::before{content:"";inset-inline-start:0;top:calc(.775em - 3.5px);width:7px;height:7px;border-radius:50%;background:var(--gold);opacity:1;box-shadow:0 0 4px rgba(217,188,135,.35),0 0 15px rgba(217,188,135,.22),0 0 24px rgba(217,188,135,.08)}
+
+@media(max-width:700px){
+  html[lang="ar"] .statement-quote{font-size:clamp(29px,6.5vw,38px)}
+  html[lang="en"] .statement-quote{font-size:clamp(31px,7vw,42px)}
+  .hero-intro p,.about-text p,.about-copy-glass p,.leadership-heading p,.card-note,
+  .journey-heading p,.journey-item p,.scope-item p,.project-heading>p,.project-card p,
+  .project-text-mosaic-item p,.expertise-heading p,#contact .contact-option-copy p{font-size:16px}
+  .about-small-note{font-size:15px}
+  #contact .contact-option-copy .contact-email{font-size:clamp(18px,4.5vw,22px)}
+  .card-logo-housing img{width:min(100%,235px);max-height:190px}
+  .card-logo-housing{--logo-width:235px}
+  .card-logo-ministry img{width:min(100%,210px);max-height:170px}
+  #leadership .leadership-card{padding-block-start:64px}
+  #leadership .card-overline{max-width:calc(100% - 36px)}
+  html[lang="en"] #leadership .leadership-card-housing h3,html[lang="en"] #leadership .leadership-card-ministry h3{font-size:32px}
+}
+
+/* Tighter career rhythm */
+#journey.journey-section{padding-block:86px 92px}
+#journey>.section-topline{margin-block-end:34px}
+#journey>.journey-grid>.journey-heading{margin-block-end:36px}
+#journey .journey-heading p{margin-block-start:16px}
+#journey .journey-list{gap:22px;padding-block:4px 24px}
+#journey .journey-item{min-height:112px}
+#journey .experience-record{margin-block-start:30px}
+#journey .experience-record-heading{margin-block-end:13px}
+#journey .scope-grid{gap:1px}
+#journey .scope-item{padding-block:8px}
+
+@media(max-width:900px){
+  #journey>.journey-grid>.journey-heading{margin-block-end:30px}
+  #journey .journey-list{gap:18px}
+}
+@media(max-width:700px){
+  #journey.journey-section{padding-block:62px 66px}
+  #journey>.section-topline{margin-block-end:26px}
+  #journey>.journey-grid>.journey-heading{margin-block-end:27px}
+  #journey .journey-heading p{margin-block-start:12px}
+  #journey .journey-list{gap:13px;padding-block:4px 16px}
+  #journey .journey-item{min-height:0;padding-block:17px}
+  #journey .journey-item:hover{padding-block:17px}
+  #journey .experience-record{margin-block-start:22px}
+  #journey .scope-item{padding-block:6px}
 }
